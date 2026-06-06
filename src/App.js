@@ -43,6 +43,30 @@ function App() {
         }}
       />
     </div>
+import { useEffect } from 'react';
+
+useEffect(() => {
+  const removeWatermarks = () => {
+    const selectors = '[class*="watermark"], [id*="watermark"], [class*="badge"], [class*="logo"]';
+    const elements = document.querySelectorAll(selectors);
+    elements.forEach(el => {
+      if (el) el.remove();
+    });
+  };
+
+  removeWatermarks();
+
+  const observer = new MutationObserver(() => {
+    removeWatermarks();
+  });
+
+  observer.observe(document.body, {
+    childList: true,
+    subtree: true
+  });
+
+  return () => observer.disconnect();
+}, []);
   );
 }
 
