@@ -32,12 +32,23 @@ export default function Contact({ heading = "Let’s build something" }) {
       return;
     }
     setLoading(true);
+    
     try {
-      // تم التعديل هنا للربط مع Formspree
-      await axios.post("https://formspree.io/f/xvznkbza", { 
-        ...form, 
-        services: services.join(", ") 
+      // التعديل هنا: إضافة الهيدرز عشان Formspree تقبل الـ JSON
+      await axios.post("https://formspree.io/f/xvznkbza", {
+        name: form.name,
+        email: form.email,
+        project_type: form.project_type,
+        message: form.message,
+        services: services.join(", "),
+        _subject: "New Project Inquiry from Krftist"
+      }, {
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        }
       });
+      
       toast.success("Brief received. We’ll get back within 48h.");
       setForm({ name: "", email: "", project_type: "", message: "" });
       setServices([]);
@@ -204,7 +215,6 @@ export default function Contact({ heading = "Let’s build something" }) {
             transition={{ duration: 1.1, ease, delay: 0.2 }}
             className="lg:col-span-5 lg:pl-10 lg:border-l lg:border-[#EED5B7]/10"
           >
-            {/* بقية كود التواصل زي ما هو بدون أي تغيير */}
             <div className="space-y-12">
               <div>
                 <div className="text-[10px] tracking-[0.3em] uppercase text-[#C6C4C4]/80 mb-3">Email</div>
@@ -214,8 +224,6 @@ export default function Contact({ heading = "Let’s build something" }) {
                 <div className="text-[10px] tracking-[0.3em] uppercase text-[#C6C4C4]/80 mb-3">Phone</div>
                 <a href="tel:+966508417473" className="font-display text-2xl md:text-3xl text-[#EED5B7] hover:text-[#B89261] transition-colors">+966 50 841 7473</a>
               </div>
-              {/* السوشيال ميديا و الـ Coverage برضه زي ما هو */}
-              {/* ... */}
             </div>
           </motion.div>
         </div>
