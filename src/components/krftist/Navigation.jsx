@@ -39,7 +39,7 @@ export default function Navigation() {
             src="/logo1.png"
             alt="KRFTIST logomark"
             data-testid="nav-logomark"
-            className="w-20 h-20 md:w-28 md:h-28 object-contain shrink-0"
+            className="w-32 h-32 md:w-40 md:h-40 object-contain shrink-0"
             style={{ mixBlendMode: "screen" }}
           />
           
