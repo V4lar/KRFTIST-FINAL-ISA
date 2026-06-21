@@ -25,13 +25,7 @@ export default function Hero() {
 
       {/* Top meta — Est & Locations */}
       <div className="absolute top-32 left-6 md:left-12 right-6 md:right-12 flex justify-between items-start text-xs tracking-[0.3em] uppercase text-[#EED5B7]/70">
-        <motion.div
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6, duration: 1, ease }}
-        >
-          <div className="text-[#B89261]" data-testid="hero-est">[ Est. 2010 — Studio ]</div>
-        </motion.div>
+       
         <motion.div
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
