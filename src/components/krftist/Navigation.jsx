@@ -42,9 +42,7 @@ export default function Navigation() {
             className="w-12 h-12 md:w-14 md:h-14 object-contain shrink-0"
             style={{ mixBlendMode: "screen" }}
           />
-          <span className="font-display text-xl md:text-2xl tracking-[0.18em] text-[#EED5B7]">
-            KRFTIST
-          </span>
+          
         </Link>
 
         <nav className="hidden md:flex items-center gap-12">
