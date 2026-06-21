@@ -36,7 +36,7 @@ export default function Navigation() {
           className="flex items-center gap-3"
         >
           <img
-            src="/logo.png"
+            src="/logo1.png"
             alt="KRFTIST logomark"
             data-testid="nav-logomark"
             className="w-12 h-12 md:w-14 md:h-14 object-contain shrink-0"
