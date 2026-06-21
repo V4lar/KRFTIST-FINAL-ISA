@@ -36,7 +36,7 @@ export default function Navigation() {
           className="flex items-center gap-3"
         >
           <img
-            src="https://customer-assets.emergentagent.com/job_cinematic-studio-122/artifacts/1j7c6619_WhatsApp%20Image%202026-05-30%20at%2011.09.04%20PM.jpeg"
+            src="/logo.svg"
             alt="KRFTIST logomark"
             data-testid="nav-logomark"
             className="w-12 h-12 md:w-14 md:h-14 object-contain shrink-0"
