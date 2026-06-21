@@ -39,7 +39,7 @@ export default function Navigation() {
             src="/logo1.png"
             alt="KRFTIST logomark"
             data-testid="nav-logomark"
-            className="w-40 h-40 md:w-60 md:h-60 ml-5 md:ml-10 object-contain shrink-0"
+            className="w-40 h-40 md:w-60 md:h-60 ml-4 md:ml-9 object-contain shrink-0"
           />
           
         </Link>
